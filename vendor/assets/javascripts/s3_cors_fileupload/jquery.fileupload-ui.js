@@ -58,7 +58,7 @@
             filesContainer: undefined,
             // By default, files are appended to the files container.
             // Set the following option to true, to prepend files instead:
-            prependFiles: false,
+            prependFiles: true,
             // The expected data type of the upload response, sets the dataType
             // option of the $.ajax upload requests:
             dataType: 'json',
@@ -465,7 +465,7 @@
         _cancelHandler: function (e) {
             e.preventDefault();
             var template = $(e.currentTarget)
-                    .closest('.template-upload,.template-download'),
+                    .closest('.,.template-download'),
                 data = template.data('data') || {};
             if (!data.jqXHR) {
                 data.context = data.context || template;
